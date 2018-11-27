@@ -30,6 +30,7 @@ Route::get('/usuarioas/{name}/','WelcomeUserController@welcomeu')
     ->where(['name'=>'[A-Za-z]+'])->name('user.welcome');
 
 Route::get('/usuarioas/{user}/edit','UserController@edit')->name('user.edit');
+Route::put('/usuarioas/{user}','UserController@update')->name('user.update');
 
 
 Route::get('/usuarioas/{name}/{nickname?}/','WelcomeUserController@welcome')->where(['name'=>'[A-Za-z]+','nickname'=>'[\w]+']);
