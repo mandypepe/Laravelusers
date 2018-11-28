@@ -66,7 +66,16 @@ class UserController extends Controller
         return view('Usersedit',['user'=>$user]);
     }
     public function update(User $user){
-        $data=request()->all();
+        $data=request()->validate(['name'=>'required',
+            'email'=>'required|email|unique:users,email',
+            'password'=>'required|min:6'
+        ],['name.required'=>'El nombre es requerido',
+            'email.required'=>'El email es requerido',
+            'email.email'=>'El email no es valido',
+            'email.unique'=>'El email tiene que ser unico',
+            'password.required'=>'El password es requerido',
+            'password.min'=>'El tiene que ser mayor a 6 caracteres',
+        ]);
         $data['password']=bcrypt($data['password']);
         $user->update($data);
         return redirect()->route('user.details',['user'=>$user]);
