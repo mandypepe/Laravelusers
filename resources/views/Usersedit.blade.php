@@ -33,7 +33,7 @@
                     <div class="mb-3">
                         <label for="username">Password</label>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" value="{{old('password')}}">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password"  value="{{old('password')}}">
                             <div class="invalid-feedback" style="width: 100%;">
                                 Your username is required.
                             </div>
