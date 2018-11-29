@@ -9,13 +9,13 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>NOMBRE</th>
+                        <th width="20%">NOMBRE</th>
                         <th>CORREO</th>
                         <th>ADMIN</th>
                         <th>PROFECION</th>
-                        <th>CREADO</th>
-                        <th>ACTUALIZADO</th>
-                        <th>ACCION</th>
+                        <th width="13%">CREADO </th>
+                        <th width="13%">ACTUALIZADO</th>
+                        <th width="10%">ACCION</th>
                     </tr>
                     </thead>
                     <tbody>
