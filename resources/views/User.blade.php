@@ -15,6 +15,7 @@
                         <th>PROFECION</th>
                         <th>CREADO</th>
                         <th>ACTUALIZADO</th>
+                        <th>ACCION</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,6 +29,13 @@
                             <td>{{$user->profession_id}}</td>
                             <td>{{date('Y-m-d',strtotime($user->created_at))}}</td>
                             <td>{{date('Y-m-d',strtotime($user->updated_at))}}</td>
+                            <td><form action="{{ route('user.delete', $user) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </form>
+                            </td>
+
                         </tr>
                     @endforeach
                     </tbody>

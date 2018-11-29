@@ -37,3 +37,4 @@ Route::get('/usuarioas/{name}/{nickname?}/','WelcomeUserController@welcome')->wh
 #Route::get('/usuarioas/{name}/{nickname?}/','WelcomeUserController')->where(['name'=>'[A-Za-z]+','nickname'=>'[\w]+']);
 # esto es para controller de un solo metodo y usas en el controller __invoke
 Route::get('/lista/','UserController@index')->name('user.list');
+Route::delete('/usuarioas/{user}','UserController@destroy')->name('user.delete');
