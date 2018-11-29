@@ -32,7 +32,7 @@
                             <td><form action="{{ route('user.delete', $user) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                                    <button type="submit" class="btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    <button type="submit" class="btn btn-link danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                 </form>
                             </td>
 

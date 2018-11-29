@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@index');
 
 Route::get('/usuarioas/{user}','UserController@detail_user')->name('user.details')
     ->where('user','[0-9]+');
